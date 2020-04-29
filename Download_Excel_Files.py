@@ -27,7 +27,7 @@ if not os.path.exists('excelFiles'):
 
 #gemisma tou fileUrl[] me ta urls gia kathe etos --> baseUrl+year+Q4
 #dhmioyrgia directory kathe etous
-for year in range(2011,2016):
+for year in range(2011,2014):
     fileUrl.append(baseUrl+str(year)+"-Q4")
     print(baseUrl+str(year)+'-Q4')
     if not os.path.exists('excelFiles/'+str(year)):
