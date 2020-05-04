@@ -1,6 +1,5 @@
 from itertools import product
 import xlrd
-<<<<<<< HEAD
 import SqlConnector as db
 import DBManager
 import csv
@@ -83,13 +82,13 @@ total_arrivals = []
 #apothikeyei ta stoixeia ana etos gia thn xwra me to megalutero pososto
 max_country_per_year = []
 #gia kathe etos vriskoume to sunoliko plithismo touristwn apo oles tis xwres kai thn xwra me to megalutero pososto summetoxhs
-=======
+
 import os
 import json
 
 info_list = []
 #gia kathe etos vriskoume to sunoliko plithismo touristwn apo oles tis xwres
->>>>>>> 49d6e73683c248439fb0d27ba8fecd7d88ee906b
+
 for year in range(2011,2014):
     #anoigma tou arxeiou tou etous year
     file_path = ('excelFiles/'+str(year)+'/Αφίξεις μη κατοίκων από το εξωτερικό ανά χώρα προέλευσης '+str(year)+'.xls')
@@ -117,7 +116,7 @@ for year in range(2011,2014):
                 xwra_touristwn_me_megalyterh_afiksh(percentage,typeofcell,country,year,max_country_per_year)
 
             if(sheet.cell_value(row,col) == 'ΓΕΝΙΚΟ ΣΥΝΟΛΟ' and flag):
-<<<<<<< HEAD
+
                 synolikes_afikseis_touristwn(year,row,col,total_arrivals,sheet)
 
 
@@ -177,13 +176,6 @@ print(total_arrivals_by_semester)
 
 
 
-=======
-                #print(year)
-                tourists = round(sheet.cell_value(row,col+2))
-                info_list.append({'year':year,'total_tourists':tourists})
 
-for x in info_list:
-    print(x.get('year'),x.get('total_tourists'))
-    
->>>>>>> 49d6e73683c248439fb0d27ba8fecd7d88ee906b
+
 
